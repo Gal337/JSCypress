@@ -40,6 +40,8 @@ npx run cypress --record --spec "cypress/integration/my-spec.js"
 
 /*BASIC COMMANDS*/
 /*
+To have auto-completion on . , add the line below to the top of the spec file:
+/// <reference types="Cypress" />
 visit - navigates to url,
 headless mode (no visible browser) < through command line / terminal
 node_modules/.bin/cypress run --browser chrome / firefox / edge < running cypress in specific browser
