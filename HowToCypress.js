@@ -45,6 +45,16 @@ headless mode (no visible browser) < through command line / terminal
 node_modules/.bin/cypress run --browser chrome / firefox / edge < running cypress in specific browser
 */
 
+/*DEFINING CSS SELECTORS*/
+/*
+#idname > #root
+.classname > .search-keyword
+tagname#idname > div#root
+tagname.classname > input.search-keyword
+tagname[attribute=value] > input[type='search']
+traversing from parent to child: tagname tagname > form input
+*/
+
 /*TERMINOLOGY*/
 /*
 Spec file - or test case in JavaScript
