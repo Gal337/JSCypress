@@ -43,6 +43,9 @@ npx run cypress --record --spec "cypress/integration/my-spec.js"
 To have auto-completion on . , add the line below to the top of the spec file:
 /// <reference types="Cypress" />
 visit - navigates to url,
+get("CSS selector") - finds the CSS selector / element
+type("string") - types what is in string
+DOM element:visible - detects only visible elements > cy.get(".product:visible")
 headless mode (no visible browser) < through command line / terminal
 node_modules/.bin/cypress run --browser chrome / firefox / edge < running cypress in specific browser
 */
@@ -60,5 +63,6 @@ traversing from parent to child: tagname tagname > form input
 /*TERMINOLOGY*/
 /*
 Spec file - or test case in JavaScript
-
+DOM - Document Object Model
+POM - Page Object Model
 */
