@@ -22,15 +22,20 @@ node_modules/.bin/cypress open
 3. Create file "name_of_your_test".js
 */
 
-/*INSTRUCTIONS ON RUNNING TEST CASES IN TEST RUNNER*/
+/*INSTRUCTIONS ON RUNNING / EXECUTING TEST CASES IN TEST RUNNER*/
 /*
 1. Have your Spec files (test cases) in your "examples" folder
 3. Open cypress.config.js file
 4. Inside e2e: {} type: specPattern: 'cypress/integration/examples/*.js; outside of any method!
 5. Refresh your Test Runner and you should see the test cases / spec files inside the folder we set above
- 
+6. Click on the test / spec file you want to run
 */
 
+/*BASIC COMMANDS*/
+/*
+visit - navigates to url,
+
+*/
 
 /*TERMINOLOGY*/
 /*
