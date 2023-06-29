@@ -14,3 +14,26 @@ node_modules/.bin/cypress open
 3. Click E2E Testing or Component testing (depends on what you want)
 4. Choose Browser (if you clicked E2E Testing)
 */
+
+/*INSTRUCTIONS ON CREATING TEST CASES*/
+/*
+1. Inside cypress folder (in your project structure) create new folder called "integration"
+2. After integration folder is created, create sub-folder called "examples"
+3. Create file "name_of_your_test".js
+*/
+
+/*INSTRUCTIONS ON RUNNING TEST CASES IN TEST RUNNER*/
+/*
+1. Have your Spec files (test cases) in your "examples" folder
+3. Open cypress.config.js file
+4. Inside e2e: {} type: specPattern: 'cypress/integration/examples/*.js; outside of any method!
+5. Refresh your Test Runner and you should see the test cases / spec files inside the folder we set above
+ 
+*/
+
+
+/*TERMINOLOGY*/
+/*
+Spec file - or test case in JavaScript
+
+*/
