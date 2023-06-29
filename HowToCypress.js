@@ -20,6 +20,13 @@ node_modules/.bin/cypress open
 1. Inside cypress folder (in your project structure) create new folder called "integration"
 2. After integration folder is created, create sub-folder called "examples"
 3. Create file "name_of_your_test".js
+4. In terminal type:
+node_modules/.bin/cypress run
+5. Above command will execute all the test cases present in "examples" folder
+6. If you want to run only one test case, type the command in terminal:
+npm run cy:run --record --spec "cypress/integration/my-spec.js" 
+npx run cypress --record --spec "cypress/integration/my-spec.js" 
+7. At the end of the npm or npx command, path to test case file needs to be written as well
 */
 
 /*INSTRUCTIONS ON RUNNING / EXECUTING TEST CASES IN TEST RUNNER*/
@@ -34,7 +41,8 @@ node_modules/.bin/cypress open
 /*BASIC COMMANDS*/
 /*
 visit - navigates to url,
-
+headless mode (no visible browser) < through command line / terminal
+node_modules/.bin/cypress run --browser chrome / firefox / edge < running cypress in specific browser
 */
 
 /*TERMINOLOGY*/
