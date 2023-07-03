@@ -42,9 +42,26 @@ npx run cypress --record --spec "cypress/integration/my-spec.js"
 /*
 To have auto-completion on . , add the line below to the top of the spec file:
 /// <reference types="Cypress" />
-visit - navigates to url,
-get("CSS selector") - finds the CSS selector / element
-type("string") - types what is in string
+-visit - navigates to url,
+-get("CSS selector") - finds the CSS selector / element
+-type("string") - types what is in string
+-should("have.length", 4) - compares if there are x elements visible
+-find("CSS selector") - finds child element inside parent element
+-contains("text") - looks for element that has text specified inside brackets
+-click() - clicks on element
+-each(($el, index, $list) => {}) - goes through elements that have same tag 
+-wrap() - used for chanining commands with .each command
+Example of the each and wrap commands:
+cy.get(".products").find(".product").each(($el, index, $list) => {
+      const productName = $el.find("h4.product-name").text();
+      if(productName.includes("Cashews"))
+      {
+        cy.wrap($el).find("button").click();
+      }
+    });
+-
+-
+-
 DOM element:visible - detects only visible elements > cy.get(".product:visible")
 headless mode (no visible browser) < through command line / terminal
 node_modules/.bin/cypress run --browser chrome / firefox / edge < running cypress in specific browser
@@ -66,3 +83,6 @@ Spec file - or test case in JavaScript
 DOM - Document Object Model
 POM - Page Object Model
 */
+
+/*Test 1 includes basic commands, such as: opening a webpage, finding locator and typing characters in text boxes,
+counting elements and traversing from parent to child*/
