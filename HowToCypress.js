@@ -47,8 +47,9 @@ To have auto-completion on . , add the line below to the top of the spec file:
 -type("string") - types what is in string
 -should("have.length", 4) - compares if there are x elements visible
 -find("CSS selector") - finds child element inside parent element
--contains("text") - looks for element that has text specified inside brackets
+-contains("string") - looks for element that has text specified inside brackets
 -click() - clicks on element
+
 -each(($el, index, $list) => {}) - goes through elements that have same tag 
 -wrap() - used for chanining commands with .each command
 Example of the each and wrap commands:
@@ -59,8 +60,14 @@ cy.get(".products").find(".product").each(($el, index, $list) => {
         cy.wrap($el).find("button").click();
       }
     });
--then(() => {}) - command used to wait before going to the next step
--
+
+    -then(() => {}) - command used to wait before going to the next step
+
+-as("string") - saving locators to variable
+Example of .as("string") command: 
+cy.get(".products").as("productsLocator")
+cy.get("@productsLocator")
+
 -
 DOM element:visible - detects only visible elements > cy.get(".product:visible")
 headless mode (no visible browser) < through command line / terminal

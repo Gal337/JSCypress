@@ -10,9 +10,10 @@ describe("My First Test Suite", function () {
     cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
     cy.get(".search-keyword").type("ca");
     cy.wait(2000);
+    cy.get(".products").as("productsLocator");
     cy.get(".product:visible").should('have.length', 4);
     //Traversing from parent element to child element and chaining commands on child element
-    cy.get(".products").find(".product").should("have.length", 4);
+    cy.get("@productsLocator").find(".product").should("have.length", 4);
     cy.get(":nth-child(3) > .product-action > button").click();
     cy.get(".products").find(".product").eq(1).contains("ADD TO CART").click();
 
