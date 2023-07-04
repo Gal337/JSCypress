@@ -13,6 +13,7 @@ describe("My First Test Suite", function () {
     cy.get(".product:visible").should('have.length', 4);
     //Traversing from parent element to child element and chaining commands on child element
     cy.get(".products").find(".product").should("have.length", 4);
+    cy.get(":nth-child(3) > .product-action > button").click();
     cy.get(".products").find(".product").eq(1).contains("ADD TO CART").click();
 
     cy.get(".products").find(".product").each(($el, index, $list) => {
@@ -22,5 +23,9 @@ describe("My First Test Suite", function () {
         cy.wrap($el).find("button").click();
       }
     });
-  })
+    cy.get(".brand").then(function (logoElement) {
+      cy.log(logoElement.text());
+    });
+    
+  });
 });

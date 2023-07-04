@@ -59,7 +59,7 @@ cy.get(".products").find(".product").each(($el, index, $list) => {
         cy.wrap($el).find("button").click();
       }
     });
--
+-then(() => {}) - command used to wait before going to the next step
 -
 -
 DOM element:visible - detects only visible elements > cy.get(".product:visible")
