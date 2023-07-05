@@ -93,3 +93,5 @@ POM - Page Object Model
 
 /*Test 1 includes basic commands, such as: opening a webpage, finding locator and typing characters in text boxes,
 counting elements and traversing from parent to child*/
+/*Test 2 includes most of the things as Test 1. Test 2 also includes navigating to Cart and Proceeding with order*/
+/*Test 3 includes examples for check boxes, radio buttons and dropdown menus*/
